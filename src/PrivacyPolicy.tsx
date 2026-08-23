@@ -2,100 +2,50 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArticleLayout } from './articles/components'
 
+const englishPrivacyContent = {
+  title: 'Privacy Policy',
+  lastUpdated: 'Last updated: August 2026',
+  intro: 'This policy describes how data is processed on this interactive AI portfolio.',
+  sections: [
+    {
+      heading: 'What data is collected',
+      items: [
+        'Chatbot messages: when you interact with Prakhar\'s AI avatar, messages are processed to generate contextual responses. No personally identifiable information is requested or stored.',
+        'Voice mode audio: if you activate voice mode, audio is processed in real time and is not permanently stored.',
+        'Usage analytics: anonymous technical data is used to optimize web performance.',
+      ],
+    },
+    {
+      heading: 'How data is used',
+      items: [
+        'Chatbot messages are used exclusively to answer inquiries about Prakhar Mishra\'s professional background and AI architectures.',
+        'No data is sold or shared for advertising.',
+      ],
+    },
+    {
+      heading: 'Third parties',
+      items: [
+        'Anthropic (Claude): processes chatbot queries for real-time inference.',
+        'Vercel: web hosting infrastructure.',
+      ],
+    },
+    {
+      heading: 'Cookies and local storage',
+      body: 'This site does not use third-party tracking cookies. Browser localStorage is only used for UI theme preferences.',
+    },
+    {
+      heading: 'Contact',
+      body: 'For any privacy questions, reach out to:',
+      email: 'prakharmishra2015@gmail.com',
+    },
+  ],
+  backHome: 'Back to portfolio',
+}
+
 const content = {
-  es: {
-    title: 'Politica de Privacidad',
-    lastUpdated: 'Ultima actualizacion: 15 de marzo de 2026',
-    intro: 'Esta politica describe como se recopilan y utilizan los datos cuando visitas santifer.io.',
-    sections: [
-      {
-        heading: 'Que datos se recopilan',
-        items: [
-          'Mensajes del chatbot: cuando interactuas con el chatbot "Santi", los mensajes se procesan para generar respuestas. No se solicita ni almacena informacion personal identificable.',
-          'Audio del modo voz: si activas el modo voz, el audio se procesa en tiempo real para la conversacion y no se almacena de forma permanente.',
-          'Analiticas de uso: se recopilan datos anonimos de navegacion (paginas visitadas, duracion, dispositivo) para mejorar el sitio.',
-        ],
-      },
-      {
-        heading: 'Como se utilizan los datos',
-        items: [
-          'Los mensajes del chatbot se utilizan exclusivamente para generar respuestas contextuales sobre la experiencia profesional de Santiago.',
-          'Las trazas de conversacion se almacenan de forma anonimizada para mejorar la calidad de las respuestas y detectar intentos de uso indebido.',
-          'Los datos de analiticas se utilizan para entender patrones de uso y mejorar el rendimiento del sitio.',
-        ],
-      },
-      {
-        heading: 'Terceros',
-        items: [
-          'Anthropic (Claude): procesa los mensajes del chatbot para generar respuestas.',
-          'OpenAI (Realtime API): procesa el audio del modo voz para la conversacion en tiempo real.',
-          'Langfuse: almacena trazas anonimizadas de conversaciones para observabilidad y mejora de calidad.',
-          'Vercel: aloja el sitio web y recopila analiticas anonimas de uso.',
-        ],
-      },
-      {
-        heading: 'Cookies y almacenamiento local',
-        body: 'Este sitio no utiliza cookies de seguimiento ni de terceros. Solo se utiliza localStorage del navegador para preferencias de interfaz (tema visual). No se almacena informacion personal.',
-      },
-      {
-        heading: 'No hay cuentas de usuario',
-        body: 'Este sitio no requiere registro ni inicio de sesion. No se recopilan nombres, emails ni contrasenas a traves del sitio web.',
-      },
-      {
-        heading: 'Contacto',
-        body: 'Para cualquier consulta sobre privacidad, puedes escribir a:',
-        email: 'hi@santifer.io',
-      },
-    ],
-    backHome: 'Volver al inicio',
-  },
-  en: {
-    title: 'Privacy Policy',
-    lastUpdated: 'Last updated: March 15, 2026',
-    intro: 'This policy describes how data is collected and used when you visit santifer.io.',
-    sections: [
-      {
-        heading: 'What data is collected',
-        items: [
-          'Chatbot messages: when you interact with the "Santi" chatbot, messages are processed to generate responses. No personally identifiable information is requested or stored.',
-          'Voice mode audio: if you activate voice mode, audio is processed in real time for conversation and is not permanently stored.',
-          'Usage analytics: anonymous browsing data (pages visited, duration, device) is collected to improve the site.',
-        ],
-      },
-      {
-        heading: 'How data is used',
-        items: [
-          "Chatbot messages are used exclusively to generate contextual responses about Santiago's professional experience.",
-          'Conversation traces are stored in anonymized form to improve response quality and detect misuse attempts.',
-          'Analytics data is used to understand usage patterns and improve site performance.',
-        ],
-      },
-      {
-        heading: 'Third parties',
-        items: [
-          'Anthropic (Claude): processes chatbot messages to generate responses.',
-          'OpenAI (Realtime API): processes voice mode audio for real-time conversation.',
-          'Langfuse: stores anonymized conversation traces for observability and quality improvement.',
-          'Vercel: hosts the website and collects anonymous usage analytics.',
-        ],
-      },
-      {
-        heading: 'Cookies and local storage',
-        body: 'This site does not use tracking cookies or third-party cookies. Only browser localStorage is used for interface preferences (visual theme). No personal information is stored.',
-      },
-      {
-        heading: 'No user accounts',
-        body: 'This site does not require registration or login. No names, emails, or passwords are collected through the website.',
-      },
-      {
-        heading: 'Contact',
-        body: 'For any privacy-related inquiries, you can write to:',
-        email: 'hi@santifer.io',
-      },
-    ],
-    backHome: 'Back to home',
-  },
-} as const
+  es: englishPrivacyContent,
+  en: englishPrivacyContent,
+}
 
 interface PrivacySection {
   heading: string
@@ -104,11 +54,11 @@ interface PrivacySection {
   email?: string
 }
 
-export default function PrivacyPolicy({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+export default function PrivacyPolicy({ lang = 'en' }: { lang?: 'es' | 'en' }) {
   const t = content[lang]
 
   useEffect(() => {
-    document.title = `${t.title} | santifer.io`
+    document.title = `${t.title} | Prakhar Mishra`
 
     // noindex
     let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement
@@ -119,15 +69,13 @@ export default function PrivacyPolicy({ lang = 'es' }: { lang?: 'es' | 'en' }) {
     }
     robots.content = 'noindex, nofollow'
 
-    // Fix canonical (SPA fallback serves homepage canonical — override it)
+    // Fix canonical
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
-    if (canonical) canonical.href = `https://santifer.io/${lang === 'es' ? 'privacidad' : 'privacy'}`
+    if (canonical) canonical.href = 'https://prakhar-ai.dev/privacy'
 
     // Fix meta description
     let desc = document.querySelector('meta[name="description"]') as HTMLMetaElement
-    if (desc) desc.content = lang === 'es'
-      ? 'Politica de privacidad de santifer.io. Como se recopilan y utilizan los datos del chatbot y la web.'
-      : 'Privacy policy for santifer.io. How chatbot and website data is collected and used.'
+    if (desc) desc.content = 'Privacy policy for Prakhar Mishra portfolio.'
 
     return () => {
       robots.content = 'index, follow'
@@ -153,46 +101,41 @@ export default function PrivacyPolicy({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             <h2 className="font-display text-xl font-semibold text-foreground mb-3">
               {section.heading}
             </h2>
-
             {section.items && (
-              <ul className="space-y-2 mb-4">
+              <ul className="space-y-2">
                 {section.items.map((item, j) => (
-                  <li key={j} className="flex gap-3 text-base text-muted-foreground">
-                    <span className="text-primary font-bold shrink-0 mt-0.5">{'●'}</span>
+                  <li key={j} className="text-muted-foreground flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             )}
-
             {section.body && (
-              <p className="text-base text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground">
                 {section.body}
-              </p>
-            )}
-
-            {section.email && (
-              <p className="mt-2">
-                <a
-                  href={`mailto:${section.email}`}
-                  className="text-primary underline underline-offset-2 hover:text-primary/80"
-                >
-                  {section.email}
-                </a>
+                {section.email && (
+                  <a
+                    href={`mailto:${section.email}`}
+                    className="text-primary hover:underline ml-1 font-medium"
+                  >
+                    {section.email}
+                  </a>
+                )}
               </p>
             )}
           </section>
         ))}
-
-        <div className="mt-12 pt-8 border-t border-border">
-          <Link
-            to={lang === 'es' ? '/' : '/en'}
-            className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-          >
-            {'← '}{t.backHome}
-          </Link>
-        </div>
       </article>
+
+      <div className="mt-12 pt-6 border-t border-border flex items-center justify-between">
+        <Link
+          to="/"
+          className="text-sm text-primary hover:underline font-medium"
+        >
+          {t.backHome}
+        </Link>
+      </div>
     </ArticleLayout>
   )
 }

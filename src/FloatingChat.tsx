@@ -650,7 +650,7 @@ export default function FloatingChat({ lang }: FloatingChatProps) {
                   <source srcSet="/foto-avatar-sm.webp" type="image/webp" />
                   <img
                     src="/foto-avatar-sm.webp"
-                    alt="santifer avatar"
+                    alt="Prakhar Mishra avatar"
                     className="w-10 h-10 rounded-full object-cover ring-2 ring-primary/20"
                     width={40}
                     height={40}

@@ -706,9 +706,9 @@ export function getAltPaths(): Record<string, string> {
 
 export function getPageTitles(): Record<string, string> {
   const map: Record<string, string> = {
-    '/': 'Portfolio de Santiago',
-    '/en': "Santiago's Portfolio",
-    '/sobre-mi': 'Sobre Mí',
+    '/': "Prakhar Mishra's Portfolio",
+    '/en': "Prakhar Mishra's Portfolio",
+    '/sobre-mi': 'About',
     '/about': 'About',
   }
   for (const article of articleRegistry) {
