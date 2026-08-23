@@ -11,7 +11,9 @@ import {
 import { getSystemPrompt } from './_shared/prompt.js'
 
 const client = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
+  apiKey: process.env.OPENROUTER_API_KEY || process.env.ANTHROPIC_API_KEY,
+  baseURL: 'https://openrouter.ai/api/v1',
+  defaultHeaders: { 'HTTP-Referer': 'https://cv.investogram.org', 'X-Title': 'Prakhar Chatbot' },
 })
 
 // ---------------------------------------------------------------------------
@@ -156,7 +158,7 @@ export default async function handler(req) {
       const td0 = Date.now()
 
       const firstResponse = await client.messages.create({
-        model: 'claude-sonnet-4-6',
+        model: 'google/gemini-2.5-pro-free',
         max_tokens: 300,
         system: systemBlocks,
         messages: cleanMessages,
@@ -173,7 +175,7 @@ export default async function handler(req) {
           inputTokens: tdInputTokens,
           outputTokens: tdOutputTokens,
           latencyMs: toolDecisionMs,
-          cost: calcCost('claude-sonnet-4-6', tdInputTokens, tdOutputTokens),
+          cost: calcCost('google/gemini-2.5-pro-free', tdInputTokens, tdOutputTokens),
         },
       })
 
@@ -317,7 +319,7 @@ function streamResponse({
   let stream = null
   if (!precomputedResponse) {
     const streamParams = {
-      model: 'claude-sonnet-4-6',
+      model: 'google/gemini-2.5-pro-free',
       max_tokens: 800,
       system: systemBlocks,
       messages,
@@ -374,7 +376,7 @@ function streamResponse({
 
           const pcIn = precomputedResponse.usage?.input_tokens || 0
           const pcOut = precomputedResponse.usage?.output_tokens || 0
-          generationCost = calcCost('claude-sonnet-4-6', pcIn, pcOut)
+          generationCost = calcCost('google/gemini-2.5-pro-free', pcIn, pcOut)
           generationSpan?.end({
             metadata: {
               outputTokens: pcOut,
@@ -393,7 +395,7 @@ function streamResponse({
             try {
               // Create fresh stream for each attempt
               const activeStream = attempt === 0 ? stream : client.messages.stream({
-                model: 'claude-sonnet-4-6',
+                model: 'google/gemini-2.5-pro-free',
                 max_tokens: 800,
                 system: systemBlocks,
                 messages,
@@ -431,7 +433,7 @@ function streamResponse({
                 const finalMessage = await activeStream.finalMessage()
                 const genIn = finalMessage.usage?.input_tokens || 0
                 const genOut = finalMessage.usage?.output_tokens || 0
-                generationCost = calcCost('claude-sonnet-4-6', genIn, genOut)
+                generationCost = calcCost('google/gemini-2.5-pro-free', genIn, genOut)
                 generationSpan?.end({
                   metadata: {
                     outputTokens: genOut,
@@ -470,9 +472,9 @@ function streamResponse({
         if (!leakDetected) {
           // Calculate total cost across all spans
           const costBreakdown = {
-            toolDecision: calcCost('claude-sonnet-4-6', tdInputTokens || 0, tdOutputTokens || 0),
+            toolDecision: calcCost('google/gemini-2.5-pro-free', tdInputTokens || 0, tdOutputTokens || 0),
             embedding: calcCost('text-embedding-3-small', ragUsage?.embeddingTokens || 0),
-            reranking: calcCost('claude-haiku-4-5-20251001', ragUsage?.rerankInputTokens || 0, ragUsage?.rerankOutputTokens || 0),
+            reranking: calcCost('google/gemini-2.5-flash-free', ragUsage?.rerankInputTokens || 0, ragUsage?.rerankOutputTokens || 0),
             generation: generationCost,
           }
           costBreakdown.total = Object.values(costBreakdown).reduce((a, b) => a + b, 0)
@@ -539,7 +541,7 @@ function streamResponse({
         if (fallbackMessages && !fullOutput) {
           try {
             const fallbackStream = client.messages.stream({
-              model: 'claude-sonnet-4-6',
+              model: 'google/gemini-2.5-pro-free',
               max_tokens: 800,
               system: systemBlocks,
               messages: fallbackMessages,
@@ -622,11 +624,11 @@ async function scoreTrace(traceId, userMessage, response, ragUsed, langfuse) {
     const scoringGen = langfuse.generation({
       traceId,
       name: 'online_scoring',
-      model: 'claude-haiku-4-5-20251001',
+      model: 'google/gemini-2.5-flash-free',
     })
 
     const scoringResponse = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
+      model: 'google/gemini-2.5-flash-free',
       max_tokens: 200,
       messages: [{
         role: 'user',
