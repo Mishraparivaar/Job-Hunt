@@ -200,7 +200,7 @@ function StorySection({ t }: { t: (typeof translations)[Lang] }) {
 
 function App() {
   const location = useLocation()
-  const lang: Lang = location.pathname === '/en' ? 'en' : 'es'
+  const lang: Lang = 'en'
   const t = translations[lang]
   const hydrated = useHydrated()
   useHeroStyles()
