@@ -158,7 +158,7 @@ export default async function handler(req) {
       const td0 = Date.now()
 
       const firstResponse = await client.messages.create({
-        model: 'google/gemini-2.5-flash',
+        model: 'openrouter/free',
         max_tokens: 300,
         system: systemBlocks,
         messages: cleanMessages,
@@ -175,7 +175,7 @@ export default async function handler(req) {
           inputTokens: tdInputTokens,
           outputTokens: tdOutputTokens,
           latencyMs: toolDecisionMs,
-          cost: calcCost('google/gemini-2.5-flash', tdInputTokens, tdOutputTokens),
+          cost: calcCost('openrouter/free', tdInputTokens, tdOutputTokens),
         },
       })
 
@@ -319,7 +319,7 @@ function streamResponse({
   let stream = null
   if (!precomputedResponse) {
     const streamParams = {
-      model: 'google/gemini-2.5-flash',
+      model: 'openrouter/free',
       max_tokens: 800,
       system: systemBlocks,
       messages,
@@ -376,7 +376,7 @@ function streamResponse({
 
           const pcIn = precomputedResponse.usage?.input_tokens || 0
           const pcOut = precomputedResponse.usage?.output_tokens || 0
-          generationCost = calcCost('google/gemini-2.5-flash', pcIn, pcOut)
+          generationCost = calcCost('openrouter/free', pcIn, pcOut)
           generationSpan?.end({
             metadata: {
               outputTokens: pcOut,
@@ -395,7 +395,7 @@ function streamResponse({
             try {
               // Create fresh stream for each attempt
               const activeStream = attempt === 0 ? stream : client.messages.stream({
-                model: 'google/gemini-2.5-flash',
+                model: 'openrouter/free',
                 max_tokens: 800,
                 system: systemBlocks,
                 messages,
@@ -433,7 +433,7 @@ function streamResponse({
                 const finalMessage = await activeStream.finalMessage()
                 const genIn = finalMessage.usage?.input_tokens || 0
                 const genOut = finalMessage.usage?.output_tokens || 0
-                generationCost = calcCost('google/gemini-2.5-flash', genIn, genOut)
+                generationCost = calcCost('openrouter/free', genIn, genOut)
                 generationSpan?.end({
                   metadata: {
                     outputTokens: genOut,
@@ -472,9 +472,9 @@ function streamResponse({
         if (!leakDetected) {
           // Calculate total cost across all spans
           const costBreakdown = {
-            toolDecision: calcCost('google/gemini-2.5-flash', tdInputTokens || 0, tdOutputTokens || 0),
+            toolDecision: calcCost('openrouter/free', tdInputTokens || 0, tdOutputTokens || 0),
             embedding: calcCost('text-embedding-3-small', ragUsage?.embeddingTokens || 0),
-            reranking: calcCost('google/gemini-2.5-flash', ragUsage?.rerankInputTokens || 0, ragUsage?.rerankOutputTokens || 0),
+            reranking: calcCost('openrouter/free', ragUsage?.rerankInputTokens || 0, ragUsage?.rerankOutputTokens || 0),
             generation: generationCost,
           }
           costBreakdown.total = Object.values(costBreakdown).reduce((a, b) => a + b, 0)
@@ -541,7 +541,7 @@ function streamResponse({
         if (fallbackMessages && !fullOutput) {
           try {
             const fallbackStream = client.messages.stream({
-              model: 'google/gemini-2.5-flash',
+              model: 'openrouter/free',
               max_tokens: 800,
               system: systemBlocks,
               messages: fallbackMessages,
@@ -624,11 +624,11 @@ async function scoreTrace(traceId, userMessage, response, ragUsed, langfuse) {
     const scoringGen = langfuse.generation({
       traceId,
       name: 'online_scoring',
-      model: 'google/gemini-2.5-flash',
+      model: 'openrouter/free',
     })
 
     const scoringResponse = await client.messages.create({
-      model: 'google/gemini-2.5-flash',
+      model: 'openrouter/free',
       max_tokens: 200,
       messages: [{
         role: 'user',
