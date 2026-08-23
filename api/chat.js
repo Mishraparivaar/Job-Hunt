@@ -26,15 +26,18 @@ export default async function handler(req) {
     const rawLastMessage = messages.filter(m => m.role === 'user').pop()?.content || ''
     const lastUserMessage = typeof rawLastMessage === 'string' ? rawLastMessage.slice(0, 2000) : ''
 
-    const langInstruction = lang === 'en'
-      ? `The user is browsing in English. You MUST respond in English. Contact email: hi@prakhar-ai.dev`
-      : `The user is browsing in English. Respond warmly and concisely in English. Contact email: hi@prakhar-ai.dev`
+    const brevityInstruction = `CRITICAL RESPONSE FORMAT:
+- Speak in first-person as Prakhar Mishra.
+- Keep your answers SHORT, PUNCHY, and CONVERSATIONAL (2 to 4 sentences max, 40-75 words) by default.
+- Focus on tangible business value ($1.5M-$3M+ bench savings, 94 prototypes, 74% FinOps reduction, 200 trainers).
+- Do NOT output long bulleted essays unless the user explicitly asks for deep technical breakdown.
+- Always end with a short, inviting follow-up question.`
 
     const pageContext = currentPage
       ? `\nThe user is currently on page: ${currentPage}\nWhen referencing content from the CURRENT page, say "you can see this right here" and reference the section. When referencing OTHER articles, mention them by name.`
       : ''
 
-    const systemPrompt = `${SYSTEM_PROMPT_FALLBACK}\n\n${langInstruction}${pageContext}`
+    const systemPrompt = `${SYSTEM_PROMPT_FALLBACK}\n\n${brevityInstruction}${pageContext}`
 
     const formattedMessages = [
       { role: 'system', content: systemPrompt },
@@ -60,7 +63,7 @@ export default async function handler(req) {
               model: 'google/gemini-2.5-flash',
               messages: formattedMessages,
               stream: true,
-              max_tokens: 1200,
+              max_tokens: 450,
               temperature: 0.7,
             }),
           })
