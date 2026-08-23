@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useLocation, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import {
   Mail,
@@ -199,7 +199,6 @@ function StorySection({ t }: { t: (typeof translations)[Lang] }) {
 }
 
 function App() {
-  const location = useLocation()
   const lang: Lang = 'en'
   const t = translations[lang]
   const hydrated = useHydrated()
@@ -256,7 +255,7 @@ function App() {
               className="text-center md:text-left"
             >
               <p className="text-lg text-muted-foreground mb-2">
-                {lang === 'es' ? 'Hola, soy' : "Hi, I'm"}{' '}
+                {"Hi, I'm"}{' '}
                 <span className="text-gradient-theme font-bold">Prakhar Mishra</span>
               </p>
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 leading-tight">
@@ -265,7 +264,7 @@ function App() {
                 <br />
                 {t.greeting}
                 <br />
-                {lang === 'es' ? 'con ' : 'with '}<BeamPill>Claude Architect <span className="opacity-60">+</span> FinOps <span className="opacity-60">+</span> Control Towers</BeamPill>
+                {'with '}<BeamPill>Claude Architect <span className="opacity-60">+</span> FinOps <span className="opacity-60">+</span> Control Towers</BeamPill>
               </h1>
 
               <div className="flex flex-wrap justify-center md:justify-start gap-3">
