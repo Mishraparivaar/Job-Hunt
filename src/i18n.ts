@@ -300,16 +300,16 @@ const masterEnglish = {
   chat: {
     title: "Prakhar's Digital CV",
     subtitle: 'Chief of Staff & AI Transformation Lead',
-    greeting: "Hi, I'm Prakhar's digital CV. Ask me about his Claude Certified Architect credentials, executive AI enablement programs, 74% FinOps token reduction, or Chief of Staff leadership.",
-    placeholder: 'Ask about Claude Architect, AI Enablement, FinOps, or Chief of Staff...',
+    greeting: "Hi, I'm Prakhar's digital CV. Ask me about his Claude Certified Architect credentials, enterprise AI enablement programs, or Chief of Staff leadership.",
+    placeholder: 'Ask about Claude Architect, AI Enablement, or Chief of Staff...',
     error: 'An error occurred while connecting to the avatar.',
     offline: 'Offline mode active. Using local response engine.',
     contactCtaTitle: 'Ready to connect with Prakhar directly?',
     prompts: [
       { icon: 'badge-check', label: 'Claude Certified Architect', query: 'Tell me about your Claude Certified Architect credential' },
-      { icon: 'zap', label: 'Executive AI Studio (94 Solutions)', query: 'Tell me about the Executive AI Studio and 94 prototypes enabled' },
-      { icon: 'code', label: '74% AI FinOps Token Reduction', query: 'Explain the 74% token reduction in AI FinOps' },
-      { icon: 'trending-up', label: 'Chief of Staff & Control Tower', query: 'What is your role as Chief of Staff and Global PMO Lead?' },
+      { icon: 'zap', label: 'Enterprise AI Enablement (20K Org)', query: 'Tell me about your Enterprise AI Enablement program across 20,000 professionals' },
+      { icon: 'trending-up', label: 'Chief of Staff & Global PMO', query: 'What is your role as Chief of Staff and Global PMO Lead?' },
+      { icon: 'code', label: '94 Executive AI Solutions', query: 'How did senior leaders build 94 AI prototypes in the Executive Studio?' },
     ],
     voice: {
       title: "Prakhar's Voice AI",
