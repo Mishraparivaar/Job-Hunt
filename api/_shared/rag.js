@@ -22,7 +22,7 @@ export function calcCost(model, inputTokens, outputTokens = 0) {
 // ---------------------------------------------------------------------------
 
 export function isRagEnabled() {
-  return !!(process.env.OPENAI_API_KEY && process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY)
+  return !!(process.env.OPENAI_API_KEY && process.env.RAG_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY)
 }
 
 export const PORTFOLIO_TOOL = {
@@ -82,7 +82,7 @@ export async function searchDocuments(queryText, queryEmbedding) {
 
   try {
     const response = await fetch(
-      `${process.env.SUPABASE_URL}/rest/v1/rpc/hybrid_search`,
+      `${process.env.RAG_SUPABASE_URL}/rest/v1/rpc/hybrid_search`,
       {
         method: 'POST',
         headers: {
@@ -104,7 +104,7 @@ export async function searchDocuments(queryText, queryEmbedding) {
     clearTimeout(timeout)
 
     if (!response.ok) {
-      throw new Error(`Supabase search failed: ${response.status}`)
+      return { chunks: [], latencyMs: Date.now() - t0 }
     }
 
     const chunks = await response.json()
@@ -115,9 +115,9 @@ export async function searchDocuments(queryText, queryEmbedding) {
   } catch (err) {
     clearTimeout(timeout)
     if (err.name === 'AbortError') {
-      throw new Error('Supabase search timeout (>2s)')
+      return { chunks: [], latencyMs: Date.now() - t0 }
     }
-    throw err
+    return { chunks: [], latencyMs: Date.now() - t0 }
   }
 }
 
