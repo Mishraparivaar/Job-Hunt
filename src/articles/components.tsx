@@ -105,7 +105,7 @@ export function ArticleHeader({
   authorName = 'Prakhar Mishra',
   authorUrl,
   authorBio,
-  avatarSrc = '/foto-avatar-sm.webp',
+  avatarSrc = '/foto-avatar-sm.jpg',
   lang,
 }: ArticleHeaderProps) {
   const resolvedAuthorUrl = authorUrl ?? (lang === 'es' ? '/sobre-mi' : '/about')
@@ -193,7 +193,7 @@ export function ArticleFooter({ lang, utmCampaign: _utmCampaign }: ArticleFooter
     <footer className="mt-16 pt-8 border-t border-border">
       <div className="flex items-start gap-3 mb-6">
         <img
-          src="/foto-avatar-sm.webp"
+          src="/foto-avatar-sm.jpg"
           alt="Prakhar Mishra"
           className="w-12 h-12 rounded-full shrink-0"
           width={48}

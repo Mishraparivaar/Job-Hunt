@@ -229,7 +229,7 @@ function App() {
                 <div className="absolute inset-2 rounded-full bg-gradient-theme-50 p-[2px]">
                   <div className="w-full h-full rounded-full overflow-hidden">
                     <img
-                      src="/foto-avatar.webp"
+                      src="/foto-avatar.jpg"
                       alt="Prakhar Mishra"
                       className="w-full h-full object-cover"
                       width={192}

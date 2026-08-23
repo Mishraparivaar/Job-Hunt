@@ -50,8 +50,8 @@ export default function AboutPage({ lang = 'en' }: { lang?: AboutLang }) {
         {/* Header */}
         <header className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-10">
           <img
-            src="/foto-avatar-sm.webp"
-            srcSet="/foto-avatar-sm.webp 192w, /foto-avatar.webp 384w"
+            src="/foto-avatar-sm.jpg"
+            srcSet="/foto-avatar-sm.jpg 192w, /foto-avatar.jpg 384w"
             sizes="96px"
             alt="Prakhar Mishra"
             className="w-24 h-24 rounded-full border-2 border-border shadow-lg"
