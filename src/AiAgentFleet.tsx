@@ -34,7 +34,7 @@ export default function AiAgentFleet({ lang = 'en' }: { lang?: Lang }) {
     altSlug: t.altSlug,
     title: t.seo.title,
     description: t.seo.description,
-    image: 'https://santifer.io/ai-agent-fleet/og-ai-agent-fleet.webp',
+    image: 'https://prakhar-ai.dev/ai-agent-fleet/og-ai-agent-fleet.webp',
     publishedTime: '2026-07-10',
     modifiedTime: '2026-07-17',
     articleTags: 'ai agents,multi-agent,open source,maintainer,Claude Code,sdlc,context engineering',
@@ -86,7 +86,7 @@ export default function AiAgentFleet({ lang = 'en' }: { lang?: Lang }) {
         <Prose>{s.outgrew.paras[0]}</Prose>
         <figure className="my-8 max-w-lg mx-auto">
           <a
-            href="https://x.com/santifer/status/2041403685696053741"
+            href="https://x.com/prakhar/status/2041403685696053741"
             target="_blank"
             rel="noopener"
             aria-label={lang === 'es' ? 'Ver el tweet en X' : 'View the post on X'}
@@ -95,8 +95,8 @@ export default function AiAgentFleet({ lang = 'en' }: { lang?: Lang }) {
             <img
               src="/ai-agent-fleet/tweet-12k-stars.webp"
               alt={lang === 'es'
-                ? 'Tweet fijado de @santifer: "Built this to find my own job. Open sourced it. 12K+ stars in two days." — citando a Garry Tan ("Golden age of open source is here"), con 553K visualizaciones'
-                : 'Pinned post by @santifer: "Built this to find my own job. Open sourced it. 12K+ stars in two days." — quote-tweeting Garry Tan ("Golden age of open source is here"), 553K views'}
+                ? 'Tweet fijado de @prakhar: "Built this to find my own job. Open sourced it. 12K+ stars in two days." — citando a Garry Tan ("Golden age of open source is here"), con 553K visualizaciones'
+                : 'Pinned post by @prakhar: "Built this to find my own job. Open sourced it. 12K+ stars in two days." — quote-tweeting Garry Tan ("Golden age of open source is here"), 553K views'}
               width={594}
               height={581}
               loading="lazy"
@@ -215,7 +215,7 @@ export default function AiAgentFleet({ lang = 'en' }: { lang?: Lang }) {
         <H2 id="numbers">{s.numbers.heading}</H2>
         <figure className="my-8">
           <a
-            href="https://warpchart.dev/r/santifer/career-ops?utm_source=santifer.io"
+            href="https://warpchart.dev/r/prakharmishra2026/career-ops?utm_source=prakhar-ai.dev"
             target="_blank"
             rel="noopener"
             aria-label="The career-ops warp chart on Warpchart"
@@ -223,7 +223,7 @@ export default function AiAgentFleet({ lang = 'en' }: { lang?: Lang }) {
           >
             {/* theme=dark fixed: site is hardcoded dark, dynamic mode would follow visitor OS */}
             <img
-              src="https://warpchart.dev/api/chart?repo=santifer/career-ops&theme=dark&w=800&h=420"
+              src="https://warpchart.dev/api/chart?repo=prakharmishra2026/career-ops&theme=dark&w=800&h=420"
               alt={s.numbers.warpchart.alt}
               width={800}
               height={420}
@@ -234,7 +234,7 @@ export default function AiAgentFleet({ lang = 'en' }: { lang?: Lang }) {
           <figcaption className="mt-2 text-center text-sm text-muted-foreground">
             {s.numbers.warpchart.caption}{' '}
             <a
-              href="https://warpchart.dev?utm_source=santifer.io"
+              href="https://warpchart.dev?utm_source=prakhar-ai.dev"
               target="_blank"
               rel="noopener"
               className="text-primary hover:underline"

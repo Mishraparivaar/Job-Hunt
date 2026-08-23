@@ -69,7 +69,7 @@ export default function CareerOps({ lang = 'en' }: { lang?: Lang }) {
     altSlug: t.altSlug,
     title: t.seo.title,
     description: t.seo.description,
-    image: 'https://santifer.io/career-ops/og-career-ops.webp',
+    image: 'https://prakhar-ai.dev/career-ops/og-career-ops.webp',
     publishedTime: '2026-03-17',
     modifiedTime: '2026-07-17',
     articleTags: 'multi-agent,job search,Claude Code,ATS,batch processing,HITL,automation',
@@ -110,28 +110,28 @@ export default function CareerOps({ lang = 'en' }: { lang?: Lang }) {
         fetchPriority="high"
       />
 
-      <Manifesto cite="https://santifer.io/career-ops">{t.manifesto}</Manifesto>
+      <Manifesto cite="https://prakhar-ai.dev/career-ops">{t.manifesto}</Manifesto>
       <MetricsGrid items={t.heroMetrics} columns={5} compact />
 
       <div className="mb-12 md:mb-16">
         <PressFeatures lang={lang} />
       </div>
 
-      <GitHubRepoBadge repo="santifer/career-ops" stars="60.3K" forks="11.9K" lang={lang} />
+      <GitHubRepoBadge repo="prakharmishra2026/career-ops" stars="60.3K" forks="11.9K" lang={lang} />
 
       {/* The career-ops warp chart (Warpchart) — animated SVG served as plain <img>, prerender-safe (no iframe, no hydration guard needed).
           theme=dark FIXED on purpose: site is hardcoded dark; Warpchart's dynamic day/night mode (omitting theme) follows the visitor's OS
           prefers-color-scheme, not the host page — a light-OS visitor would get a light chart on our dark page (confirmed by warpchart via IPC). */}
       <figure className="my-8">
         <a
-          href="https://warpchart.dev/r/santifer/career-ops?utm_source=santifer.io"
+          href="https://warpchart.dev/r/prakharmishra2026/career-ops?utm_source=prakhar-ai.dev"
           target="_blank"
           rel="noopener"
           aria-label="The career-ops warp chart on Warpchart"
           className="block hover:opacity-90 transition-opacity"
         >
           <img
-            src="https://warpchart.dev/api/chart?repo=santifer/career-ops&theme=dark&w=800&h=420"
+            src="https://warpchart.dev/api/chart?repo=prakharmishra2026/career-ops&theme=dark&w=800&h=420"
             alt={t.starChart.alt}
             width={800}
             height={420}
@@ -142,7 +142,7 @@ export default function CareerOps({ lang = 'en' }: { lang?: Lang }) {
         <figcaption className="mt-2 text-center text-sm text-muted-foreground">
           {t.starChart.caption}{' '}
           <a
-            href="https://warpchart.dev?utm_source=santifer.io"
+            href="https://warpchart.dev?utm_source=prakhar-ai.dev"
             target="_blank"
             rel="noopener"
             className="text-primary hover:underline"

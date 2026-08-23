@@ -11,29 +11,29 @@ export default function SantiferIRepair({ lang }: { lang: IRepairLang }) {
   const jsonLd = useMemo(() => ({
     '@context': 'https://schema.org',
     '@graph': [
-      { '@id': 'https://santifer.io/#person' },
+      { '@id': 'https://prakhar-ai.dev/#person' },
       {
         '@type': 'WebSite',
-        '@id': 'https://santifer.io/#website',
-        url: 'https://santifer.io',
-        name: 'santifer.io',
-        publisher: { '@id': 'https://santifer.io/#person' },
+        '@id': 'https://prakhar-ai.dev/#website',
+        url: 'https://prakhar-ai.dev',
+        name: 'prakhar-ai.dev',
+        publisher: { '@id': 'https://prakhar-ai.dev/#person' },
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: t.nav.breadcrumbHome, item: `https://santifer.io${lang === 'en' ? '/en' : '/'}` },
-          { '@type': 'ListItem', position: 2, name: t.nav.breadcrumbCurrent, item: `https://santifer.io/${t.slug}` },
+          { '@type': 'ListItem', position: 1, name: t.nav.breadcrumbHome, item: `https://prakhar-ai.dev${lang === 'en' ? '/en' : '/'}` },
+          { '@type': 'ListItem', position: 2, name: t.nav.breadcrumbCurrent, item: `https://prakhar-ai.dev/${t.slug}` },
         ],
       },
       {
         '@type': 'WebPage',
-        '@id': `https://santifer.io/${t.slug}#webpage`,
-        url: `https://santifer.io/${t.slug}`,
+        '@id': `https://prakhar-ai.dev/${t.slug}#webpage`,
+        url: `https://prakhar-ai.dev/${t.slug}`,
         name: t.seo.title,
         description: t.seo.description,
-        about: { '@id': 'https://santifer.io/#person' },
-        isPartOf: { '@id': 'https://santifer.io/#website' },
+        about: { '@id': 'https://prakhar-ai.dev/#person' },
+        isPartOf: { '@id': 'https://prakhar-ai.dev/#website' },
         inLanguage: ['es', 'en'],
       },
     ],
@@ -45,11 +45,11 @@ export default function SantiferIRepair({ lang }: { lang: IRepairLang }) {
     altSlug: t.altSlug,
     title: t.seo.title,
     description: t.seo.description,
-    image: 'https://santifer.io/business-os/og-business-os.webp',
+    image: 'https://prakhar-ai.dev/business-os/og-business-os.webp',
     publishedTime: '2026-03-08',
     articleTags: 'Santifer iRepair, phone repair, Seville, exit, founder',
     jsonLd,
-    xDefaultSlug: 'santifer-irepair',
+    xDefaultSlug: 'prakhar-irepair',
   })
 
   useEffect(() => {
@@ -94,7 +94,7 @@ export default function SantiferIRepair({ lang }: { lang: IRepairLang }) {
         <div className="bg-card border border-border rounded-xl overflow-hidden grid grid-rows-[auto_1fr_auto_auto]">
           <div className="flex items-center gap-4 p-6 pb-0">
             <img
-              src="/logo-santifer.webp"
+              src="/logo-prakhar.webp"
               alt="Santifer iRepair logo"
               className="w-16 h-16 rounded-full border-2 border-primary/20 shrink-0 object-cover"
               width={64}
@@ -116,7 +116,7 @@ export default function SantiferIRepair({ lang }: { lang: IRepairLang }) {
           </div>
           <div className="px-6 pb-6">
             <a
-              href="https://santiferirepair.es"
+              href="https://prakharirepair.es"
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="inline-flex items-center justify-center gap-2 w-full px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors text-sm"
@@ -132,7 +132,7 @@ export default function SantiferIRepair({ lang }: { lang: IRepairLang }) {
           <div className="flex items-center gap-4 p-6 pb-0">
             <img
               src="/foto-avatar-sm.jpg"
-              alt="Santiago Fernández de Valderrama"
+              alt="Prakhar Mishra"
               className="w-16 h-16 rounded-full border-2 border-primary/20 shrink-0"
               width={64}
               height={64}

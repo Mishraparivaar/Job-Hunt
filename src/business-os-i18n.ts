@@ -4,7 +4,7 @@ export const businessOsContent = {
     altSlug: 'business-os-for-airtable',
     readingTime: '15 min de lectura',
     seo: {
-      title: 'Cómo Construí un Business OS Custom para +30.000 Reparaciones con Airtable (170h/Mes Ahorradas) | santifer.io',
+      title: 'Cómo Construí un Business OS Custom para +30.000 Reparaciones con Airtable (170h/Mes Ahorradas) | prakhar-ai.dev',
       description: 'Case study: cómo construí un Business OS con 12 bases de Airtable, 2.100+ campos y 50+ automatizaciones que ahorra 170h/mes en un negocio de reparación de móviles con +30.000 reparaciones completadas.',
     },
     nav: {
@@ -402,7 +402,7 @@ export const businessOsContent = {
     altSlug: 'business-os-para-airtable',
     readingTime: '15 min read',
     seo: {
-      title: 'How I Built a Custom Business OS for 30,000+ Repairs with Airtable (170h/Month Saved) | santifer.io',
+      title: 'How I Built a Custom Business OS for 30,000+ Repairs with Airtable (170h/Month Saved) | prakhar-ai.dev',
       description: 'Case study: how I built a Business OS with 12 Airtable bases, 2,100+ fields and 50+ automations that saves 170h/month at a phone repair business with 30,000+ repairs completed.',
     },
     nav: {

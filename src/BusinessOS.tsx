@@ -21,16 +21,16 @@ const AIRTABLE_SVG = (cls: string) => <svg viewBox="0 0 24 24" className={cls} f
 function ReelCard({ reelId, caption }: { reelId: string; caption: string }) {
   return (
     <a
-      href={`https://www.instagram.com/santifer/reel/${reelId}/`}
+      href={`https://www.instagram.com/prakhar/reel/${reelId}/`}
       target="_blank"
       rel="noopener noreferrer"
       className="block rounded-xl overflow-hidden border border-border bg-card group"
     >
       <div className="flex items-center gap-2 px-3 py-2.5">
         <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[1.5px] shrink-0">
-          <img src="/business-os/ig-avatar.jpg" alt="santifer" width={100} height={100} className="w-full h-full rounded-full object-cover" />
+          <img src="/business-os/ig-avatar.jpg" alt="prakhar" width={100} height={100} className="w-full h-full rounded-full object-cover" />
         </div>
-        <p className="text-xs font-semibold text-foreground leading-tight flex-1 min-w-0">santifer</p>
+        <p className="text-xs font-semibold text-foreground leading-tight flex-1 min-w-0">prakhar</p>
         <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0" />
       </div>
       <div className="relative overflow-hidden aspect-[9/16]">
@@ -78,7 +78,7 @@ export default function BusinessOS({ lang = 'en' }: { lang?: Lang }) {
     altSlug: t.altSlug,
     title: t.seo.title,
     description: t.seo.description,
-    image: 'https://santifer.io/business-os/og-business-os.webp',
+    image: 'https://prakhar-ai.dev/business-os/og-business-os.webp',
     publishedTime: '2026-02-25',
     modifiedTime: '2026-05-10',
     articleTags: 'Business OS,Airtable,n8n,ERP,CRM,automation,phone repair',
@@ -411,7 +411,7 @@ export default function BusinessOS({ lang = 'en' }: { lang?: Lang }) {
           heading={t.sections.dayInLife.pseoCta.heading}
           body={t.sections.dayInLife.pseoCta.body}
           ctaLabel={t.sections.dayInLife.pseoCta.label}
-          ctaHref={lang === 'es' ? 'mailto:hi@santifer.io?subject=Programmatic SEO' : 'mailto:hi@santifer.io?subject=Programmatic SEO'}
+          ctaHref={lang === 'es' ? 'mailto:hi@prakhar-ai.dev?subject=Programmatic SEO' : 'mailto:hi@prakhar-ai.dev?subject=Programmatic SEO'}
         />
 
         {/* Cross-Cutting Capabilities */}
@@ -560,7 +560,7 @@ export default function BusinessOS({ lang = 'en' }: { lang?: Lang }) {
           editorId="before-sketch-founder"
           items={[
             { src: '/business-os/before-notebook-sketch.webp', alt: lang === 'es' ? 'Boceto en libreta' : 'Notebook sketch', width: 800, height: 1067 },
-            { src: '/business-os/before-founder-overwhelmed.webp', alt: lang === 'es' ? 'Santiago en el taller' : 'Santiago in the workshop', width: 600, height: 800 },
+            { src: '/business-os/before-founder-overwhelmed.webp', alt: lang === 'es' ? 'Prakhar en el taller' : 'Prakhar in the workshop', width: 600, height: 800 },
           ]}
           caption={lang === 'es' ? 'Primer boceto de integración / De este caos nació un Product Builder' : 'First integration sketch / This chaos built a Product Builder'}
           className="mb-6"
@@ -657,7 +657,7 @@ export default function BusinessOS({ lang = 'en' }: { lang?: Lang }) {
           heading={t.cta.heading}
           body={t.cta.body}
           ctaLabel={t.cta.label}
-          ctaHref="mailto:hi@santifer.io?subject=Business OS Architecture"
+          ctaHref="mailto:hi@prakhar-ai.dev?subject=Business OS Architecture"
         />
 
         {/* FAQ */}

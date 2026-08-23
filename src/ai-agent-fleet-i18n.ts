@@ -130,7 +130,7 @@ export const aiAgentFleetContent = {
       numbers: {
         heading: 'Los números',
         warpchart: {
-          alt: 'Telemetría de estrellas en vivo de santifer/career-ops',
+          alt: 'Telemetría de estrellas en vivo de prakharmishra2026/career-ops',
           caption: 'La telemetría en vivo de career-ops — por',
           linkLabel: 'Warpchart',
         },
@@ -230,7 +230,7 @@ export const aiAgentFleetContent = {
         heading: 'Este modelo operativo, aplicado a tu equipo de ingeniería',
         body: 'Diseño y opero sistemas multi-agente en producción: flotas que convierten volumen mecánico en decisiones acotadas, con gates, memoria y evidencia. Despliego este modelo operativo embebido con equipos de ingeniería (forward-deployed). Si tu equipo se está ahogando en volumen, hablemos.',
         ctaLabel: 'Escríbeme',
-        ctaHref: 'mailto:hi@santifer.io',
+        ctaHref: 'mailto:hi@prakhar-ai.dev',
         secondaryLabel: 'Lee el case study de Career-Ops',
         secondaryHref: '/career-ops',
       },
@@ -405,7 +405,7 @@ export const aiAgentFleetContent = {
       numbers: {
         heading: 'The numbers',
         warpchart: {
-          alt: 'Live star telemetry of santifer/career-ops',
+          alt: 'Live star telemetry of prakharmishra2026/career-ops',
           caption: 'Live career-ops telemetry — by',
           linkLabel: 'Warpchart',
         },
@@ -505,7 +505,7 @@ export const aiAgentFleetContent = {
         heading: 'This operating model, applied to your engineering team',
         body: 'I design and operate multi-agent systems in production: fleets that turn mechanical volume into bounded decisions, with gates, memory and evidence. I deploy this operating model embedded with engineering teams (forward-deployed). If your team is drowning in volume, let\'s talk.',
         ctaLabel: 'Email me',
-        ctaHref: 'mailto:hi@santifer.io',
+        ctaHref: 'mailto:hi@prakhar-ai.dev',
         secondaryLabel: 'Read the Career-Ops case study',
         secondaryHref: '/career-ops-system',
       },

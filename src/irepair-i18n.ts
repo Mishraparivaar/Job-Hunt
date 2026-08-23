@@ -53,11 +53,11 @@ interface IRepairContent {
 
 export const irepairContent: Record<IRepairLang, IRepairContent> = {
   es: {
-    slug: 'santifer-irepair',
-    altSlug: 'santifer-irepair-founder',
+    slug: 'prakhar-irepair',
+    altSlug: 'prakhar-irepair-founder',
     seo: {
       title: 'Santifer iRepair Sevilla | Reparación de Móviles desde 2009',
-      description: 'La tienda de reparación de móviles fundada por Santiago en 2009 sigue abierta en Sevilla. 30.000+ reparaciones. Encuentra la tienda o conoce al fundador.',
+      description: 'La tienda de reparación de móviles fundada por Prakhar en 2009 sigue abierta en Sevilla. 30.000+ reparaciones. Encuentra la tienda o conoce al fundador.',
     },
     nav: {
       breadcrumbHome: 'Inicio',
@@ -77,11 +77,11 @@ export const irepairContent: Record<IRepairLang, IRepairContent> = {
       shop: {
         title: '¿Buscas Santifer iRepair?',
         body: 'Sigue abierta, sigue reparando. Con el mismo equipo y mi nombre en el cristal.',
-        cta: 'Ir a santiferirepair.es',
+        cta: 'Ir a prakharirepair.es',
         mapLabel: 'Ver ubicación y horarios',
       },
       founder: {
-        title: '¿Buscas a Santiago?',
+        title: '¿Buscas a Prakhar?',
         body: 'Un agente IA que atendía el teléfono. Un ERP de 2.100 campos. Miles de landing pages generadas con SEO programático. El comprador no cambió nada. Ahora diseño sistemas de IA y automatización para empresas.',
         cta: 'Ver portfolio',
       },
@@ -103,11 +103,11 @@ export const irepairContent: Record<IRepairLang, IRepairContent> = {
     },
   },
   en: {
-    slug: 'santifer-irepair-founder',
-    altSlug: 'santifer-irepair',
+    slug: 'prakhar-irepair-founder',
+    altSlug: 'prakhar-irepair',
     seo: {
       title: 'Santifer iRepair Seville | Phone Repair since 2009',
-      description: 'The phone repair shop founded by Santiago in 2009 is still open in Seville, Spain. 30,000+ repairs. Find the shop or meet the founder.',
+      description: 'The phone repair shop founded by Prakhar in 2009 is still open in Seville, Spain. 30,000+ repairs. Find the shop or meet the founder.',
     },
     nav: {
       breadcrumbHome: 'Home',
@@ -127,11 +127,11 @@ export const irepairContent: Record<IRepairLang, IRepairContent> = {
       shop: {
         title: 'Looking for Santifer iRepair?',
         body: 'Still open, still fixing phones. Same team and my name still on the glass.',
-        cta: 'Go to santiferirepair.es',
+        cta: 'Go to prakharirepair.es',
         mapLabel: 'View location & hours',
       },
       founder: {
-        title: 'Looking for Santiago?',
+        title: 'Looking for Prakhar?',
         body: 'An AI agent that answered the phone. A 2,100-field ERP. Thousands of landing pages generated with programmatic SEO. The buyer changed nothing. Now I design AI and automation systems for companies.',
         cta: 'View portfolio',
       },

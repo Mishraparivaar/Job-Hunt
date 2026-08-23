@@ -216,7 +216,7 @@ export const careerOpsContent = {
           manifestoLaunch: {
             intro: 'El 14 de julio de 2026, al cruzar las 60.000 estrellas en GitHub, escribí The CareerOps Manifesto y acuñé la práctica que nombra:',
             definition: "CareerOps is the practice of running a job search the way engineers run production: with evidence, with discipline, and with tools on the candidate's side of the table.",
-            attribution: 'Acuñado por Santiago Fernández de Valderrama Aparicio (santifer) en The CareerOps Manifesto, publicado el 14 de julio de 2026.',
+            attribution: 'Acuñado por Prakhar Mishra Aparicio (prakhar) en The CareerOps Manifesto, publicado el 14 de julio de 2026.',
             linkLabel: 'Lee The CareerOps Manifesto',
             linkHref: 'https://career-ops.org/manifesto',
           },
@@ -275,9 +275,9 @@ export const careerOpsContent = {
         heading: 'Tu turno',
         body: 'Career-Ops es open source bajo MIT. Clónalo, adáptalo, haz lo que necesites — es tuyo.',
         ctaLabel: 'Prueba career-ops',
-        ctaHref: 'https://career-ops.org?utm_source=santifer.io&utm_medium=case-study&utm_campaign=career-ops-deep-dive',
+        ctaHref: 'https://career-ops.org?utm_source=prakhar-ai.dev&utm_medium=case-study&utm_campaign=career-ops-deep-dive',
         ctaSecondaryLabel: 'Ver el código en GitHub',
-        ctaSecondaryHref: 'https://github.com/santifer/career-ops',
+        ctaSecondaryHref: 'https://github.com/prakharmishra2026/career-ops',
         communityHeading: '¿Dudas? Pregunta a la comunidad',
         communityBody: '4.100+ builders ya usan Career-Ops y comparten tips, plantillas y configuraciones en Discord.',
         communityLabel: 'Únete al Discord',
@@ -297,7 +297,7 @@ export const careerOpsContent = {
         },
         {
           q: '¿Cuánto cuesta ejecutar esto?',
-          a: 'Cero coste marginal por evaluación. Career-Ops corre sobre mi plan Claude Max 20x ($200/mes), que uso para todo: portfolio santifer.io, chatbot LLMOps, artículos del blog, Life OS y Career-Ops. 631 evaluaciones de ofertas + 354 PDFs ATS-optimized generados sin un solo invoice extra. Con Claude Pro ($20/mes) también funciona para volumen menor — el límite real es la ventana de uso del plan, no el coste por llamada.',
+          a: 'Cero coste marginal por evaluación. Career-Ops corre sobre mi plan Claude Max 20x ($200/mes), que uso para todo: portfolio prakhar-ai.dev, chatbot LLMOps, artículos del blog, Life OS y Career-Ops. 631 evaluaciones de ofertas + 354 PDFs ATS-optimized generados sin un solo invoice extra. Con Claude Pro ($20/mes) también funciona para volumen menor — el límite real es la ventana de uso del plan, no el coste por llamada.',
         },
         {
           q: '¿El modo apply rellena formularios automáticamente?',
@@ -309,7 +309,7 @@ export const careerOpsContent = {
         },
         {
           q: '¿Es replicable?',
-          a: 'Sí — es open source. La landing oficial es career-ops.org (docs, AI chat y guías) y el código vive en github.com/santifer/career-ops. Requiere Claude Code con acceso a Playwright. Los skill files definen la lógica de cada modo. Con 60.3K+ estrellas y 11.9K+ forks en GitHub, miles de personas ya lo han forkeado o adaptado.',
+          a: 'Sí — es open source. La landing oficial es career-ops.org (docs, AI chat y guías) y el código vive en github.com/prakharmishra2026/career-ops. Requiere Claude Code con acceso a Playwright. Los skill files definen la lógica de cada modo. Con 60.3K+ estrellas y 11.9K+ forks en GitHub, miles de personas ya lo han forkeado o adaptado.',
         },
         {
           q: '¿Cómo se usa Career-Ops?',
@@ -333,7 +333,7 @@ export const careerOpsContent = {
         },
         {
           q: '¿Quién creó Career-Ops?',
-          a: 'Lo creé yo, Santiago Fernández de Valderrama (santifer). Lo construí para mi propia búsqueda de empleo en IA — después de 16 años fundando y vendiendo un negocio de reparación de móviles. El sistema evaluó 631 ofertas y me ayudó a conseguir mi rol actual como Head of Applied AI. Cuando dejé de necesitarlo, lo publiqué como open source y se hizo viral — hoy supera las 60.3K+ estrellas en GitHub. La comunidad en Discord ya supera las 4.100 personas: discord.gg/8pRpHETxa4',
+          a: 'Lo creé yo, Prakhar Mishra (prakhar). Lo construí para mi propia búsqueda de empleo en IA — después de 16 años fundando y vendiendo un negocio de reparación de móviles. El sistema evaluó 631 ofertas y me ayudó a conseguir mi rol actual como Head of Applied AI. Cuando dejé de necesitarlo, lo publiqué como open source y se hizo viral — hoy supera las 60.3K+ estrellas en GitHub. La comunidad en Discord ya supera las 4.100 personas: discord.gg/8pRpHETxa4',
         },
       ],
     },
@@ -553,7 +553,7 @@ export const careerOpsContent = {
           manifestoLaunch: {
             intro: 'On July 14, 2026, when career-ops crossed 60,000 GitHub stars, I wrote The CareerOps Manifesto and coined the practice it names:',
             definition: "CareerOps is the practice of running a job search the way engineers run production: with evidence, with discipline, and with tools on the candidate's side of the table.",
-            attribution: 'Coined by Santiago Fernández de Valderrama Aparicio (santifer) in The CareerOps Manifesto, published July 14, 2026, when the project crossed 60,000 GitHub stars.',
+            attribution: 'Coined by Prakhar Mishra Aparicio (prakhar) in The CareerOps Manifesto, published July 14, 2026, when the project crossed 60,000 GitHub stars.',
             linkLabel: 'Read The CareerOps Manifesto',
             linkHref: 'https://career-ops.org/manifesto',
           },
@@ -612,9 +612,9 @@ export const careerOpsContent = {
         heading: 'Your turn',
         body: 'Career-Ops is open source under MIT. Clone it, fork it, adapt it — it is yours.',
         ctaLabel: 'Try career-ops',
-        ctaHref: 'https://career-ops.org?utm_source=santifer.io&utm_medium=case-study&utm_campaign=career-ops-deep-dive',
+        ctaHref: 'https://career-ops.org?utm_source=prakhar-ai.dev&utm_medium=case-study&utm_campaign=career-ops-deep-dive',
         ctaSecondaryLabel: 'View source on GitHub',
-        ctaSecondaryHref: 'https://github.com/santifer/career-ops',
+        ctaSecondaryHref: 'https://github.com/prakharmishra2026/career-ops',
         communityHeading: 'Got questions? Ask the community',
         communityBody: '4,100+ builders already use Career-Ops and share tips, templates, and setups on Discord.',
         communityLabel: 'Join Discord',
@@ -634,7 +634,7 @@ export const careerOpsContent = {
         },
         {
           q: 'What does it cost to run?',
-          a: 'Zero marginal cost per evaluation. Career-Ops runs on my Claude Max 20x plan ($200/mo), which I use for everything: portfolio santifer.io, LLMOps chatbot, blog articles, Life OS, and Career-Ops. 631 listing evaluations + 354 ATS-optimized PDFs generated without a single extra invoice. With Claude Pro ($20/mo) it also works for lower volume — the real limit is the plan usage window, not per-call cost.',
+          a: 'Zero marginal cost per evaluation. Career-Ops runs on my Claude Max 20x plan ($200/mo), which I use for everything: portfolio prakhar-ai.dev, LLMOps chatbot, blog articles, Life OS, and Career-Ops. 631 listing evaluations + 354 ATS-optimized PDFs generated without a single extra invoice. With Claude Pro ($20/mo) it also works for lower volume — the real limit is the plan usage window, not per-call cost.',
         },
         {
           q: 'Does the apply mode fill forms automatically?',
@@ -646,7 +646,7 @@ export const careerOpsContent = {
         },
         {
           q: 'Is it replicable?',
-          a: 'Yes — it is open source. The official landing is career-ops.org (docs, AI chat and guides) and the code lives at github.com/santifer/career-ops. Requires Claude Code with Playwright access. Skill files define the logic for each mode. With 60.3K+ stars and 11.9K+ forks on GitHub, thousands of people have already forked or adapted it.',
+          a: 'Yes — it is open source. The official landing is career-ops.org (docs, AI chat and guides) and the code lives at github.com/prakharmishra2026/career-ops. Requires Claude Code with Playwright access. Skill files define the logic for each mode. With 60.3K+ stars and 11.9K+ forks on GitHub, thousands of people have already forked or adapted it.',
         },
         {
           q: 'How do I use Career-Ops?',
@@ -670,7 +670,7 @@ export const careerOpsContent = {
         },
         {
           q: 'Who created Career-Ops?',
-          a: 'I did — Santiago Fernández de Valderrama (santifer). I built it for my own AI job search after spending 16 years founding and selling a phone repair business. The system evaluated 631 offers and helped me land my current role as Head of Applied AI. When I no longer needed it, I published it as open source and it went viral — today it has passed 60.3K+ GitHub stars. The Discord community is now 4,100+ people: discord.gg/8pRpHETxa4',
+          a: 'I did — Prakhar Mishra (prakhar). I built it for my own AI job search after spending 16 years founding and selling a phone repair business. The system evaluated 631 offers and helped me land my current role as Head of Applied AI. When I no longer needed it, I published it as open source and it went viral — today it has passed 60.3K+ GitHub stars. The Discord community is now 4,100+ people: discord.gg/8pRpHETxa4',
         },
       ],
     },

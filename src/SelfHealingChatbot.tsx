@@ -107,7 +107,7 @@ export default function SelfHealingChatbot({ lang = 'en' }: { lang?: Lang }) {
     altSlug: t.altSlug,
     title: t.seo.title,
     description: t.seo.description,
-    image: 'https://santifer.io/chatbot/og-self-healing-chatbot.webp',
+    image: 'https://prakhar-ai.dev/chatbot/og-self-healing-chatbot.webp',
     publishedTime: '2026-03-11',
     modifiedTime: '2026-05-10',
     articleTags: 'LLMOps,self-healing chatbot,agentic RAG,jailbreak defense,Langfuse,evals,closed-loop,prompt injection',
@@ -513,10 +513,10 @@ export default function SelfHealingChatbot({ lang = 'en' }: { lang?: Lang }) {
           heading={t.cta.heading}
           body={t.cta.body}
           ctaLabel={t.cta.label}
-          ctaHref="https://linkedin.com/in/santifer"
+          ctaHref="https://linkedin.com/in/prakhar"
           external
           secondaryLabel={t.cta.labelSecondary}
-          secondaryHref="mailto:hi@santifer.io"
+          secondaryHref="mailto:hi@prakhar-ai.dev"
         />
       </article>
 
