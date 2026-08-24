@@ -1,6 +1,6 @@
 import SYSTEM_PROMPT_FALLBACK from '../chatbot-prompt.txt'
 import { detectMentionedArticles } from './_shared/rag.js'
-import { queryKnowledgeGraph } from './knowledge-graph.js'
+import { queryKnowledgeGraph } from './_shared/knowledge-graph.js'
 
 export const config = {
   runtime: 'edge',
