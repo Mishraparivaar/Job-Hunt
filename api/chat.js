@@ -1,5 +1,6 @@
 import SYSTEM_PROMPT_FALLBACK from '../chatbot-prompt.txt'
 import { detectMentionedArticles } from './_shared/rag.js'
+import { queryKnowledgeGraph } from './knowledge-graph.js'
 
 export const config = {
   runtime: 'edge',
@@ -26,10 +27,14 @@ export default async function handler(req) {
     const rawLastMessage = messages.filter(m => m.role === 'user').pop()?.content || ''
     const lastUserMessage = typeof rawLastMessage === 'string' ? rawLastMessage.slice(0, 2000) : ''
 
+    // Resolve Knowledge Graph entities and RDF triples with <1ms latency
+    const kgResult = queryKnowledgeGraph(lastUserMessage)
+    const kgContext = kgResult.formatAsContext()
+
     const brevityInstruction = `CRITICAL RESPONSE FORMAT:
 - Speak in first-person as Prakhar Mishra.
 - Keep your answers SHORT, PUNCHY, and CONVERSATIONAL (2 to 4 sentences max, 40-75 words) by default.
-- Focus on tangible business value ($1.5M-$3M+ bench savings, 94 prototypes, 74% FinOps reduction, 200 trainers).
+- Ground all facts, numbers, and scopes strictly in the verified Knowledge Graph below.
 - Do NOT output long bulleted essays unless the user explicitly asks for deep technical breakdown.
 - Always end with a short, inviting follow-up question.`
 
@@ -37,7 +42,7 @@ export default async function handler(req) {
       ? `\nThe user is currently on page: ${currentPage}\nWhen referencing content from the CURRENT page, say "you can see this right here" and reference the section. When referencing OTHER articles, mention them by name.`
       : ''
 
-    const systemPrompt = `${SYSTEM_PROMPT_FALLBACK}\n\n${brevityInstruction}${pageContext}`
+    const systemPrompt = `${SYSTEM_PROMPT_FALLBACK}\n\n${kgContext}\n\n${brevityInstruction}${pageContext}`
 
     const formattedMessages = [
       { role: 'system', content: systemPrompt },
