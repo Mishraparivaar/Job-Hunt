@@ -39,10 +39,41 @@ const masterAboutEnglish = {
   ],
   certificationsHeading: 'Executive & Technical Credentials',
   certifications: [
-    { org: 'Anthropic', items: ['Claude Certified Architect — Foundations (100% in Agentic Architecture & Orchestration)'] },
-    { org: 'Amazon Web Services', items: ['24-Week AI Catalyst Certification', 'AWS Solutions Architect Associate'] },
-    { org: 'Scaled Agile Inc.', items: ['SAFe 5 Product Owner / Product Manager (POPM)'] },
-    { org: 'Operational Excellence', items: ['Lean Six Sigma Green Belt (KPMG)', 'Certified Scrum Master'] },
+    {
+      org: 'Anthropic',
+      items: [
+        {
+          name: 'Claude Certified Architect — Foundations (100% in Agentic Architecture & Orchestration)',
+          credlyUrl: 'https://www.credly.com/badges/5d37c2f2-c466-45c0-8cf3-a9b6b5aed4b2',
+        },
+      ],
+    },
+    {
+      org: 'Amazon Web Services',
+      items: [
+        {
+          name: 'AWS Partner: Sales Accredited - Training Badge',
+          credlyUrl: 'https://www.credly.com/badges/0a10fe25-f5cd-4838-90d3-fb2e0e62610d',
+        },
+        {
+          name: '24-Week AI Catalyst Certification (OutSkill / GrowthSchool)',
+        },
+        {
+          name: 'AWS Solutions Architect Associate',
+        },
+      ],
+    },
+    {
+      org: 'Scaled Agile Inc.',
+      items: [{ name: 'SAFe 5 Product Owner / Product Manager (POPM)' }],
+    },
+    {
+      org: 'Operational Excellence',
+      items: [
+        { name: 'Lean Six Sigma Green Belt (KPMG)' },
+        { name: 'Certified Scrum Master' },
+      ],
+    },
   ],
   educationHeading: 'Education',
   education: [

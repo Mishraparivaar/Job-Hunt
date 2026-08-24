@@ -597,13 +597,38 @@ function App() {
               <div className="space-y-2.5">
                 {t.certifications.items.map((cert, i) => (
                   <AnimatedSection key={i} delay={0.1 + i * 0.05}>
-                    <div className="p-4 rounded-xl bg-card border border-border flex items-center justify-between gap-3">
-                      <div>
-                        <p className="font-medium text-sm">{cert.name}</p>
-                        <p className="text-xs text-muted-foreground">{cert.issuer}</p>
+                    {'credlyUrl' in cert && cert.credlyUrl ? (
+                      <a
+                        href={cert.credlyUrl as string}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group p-4 rounded-xl bg-card border border-border hover:border-primary/50 hover:bg-card/80 transition-all duration-300 flex items-center justify-between gap-3 block"
+                      >
+                        <div>
+                          <div className="flex items-center gap-2">
+                            <p className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
+                              {cert.name}
+                            </p>
+                            <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+                          </div>
+                          <div className="flex items-center gap-2 mt-1">
+                            <p className="text-xs text-muted-foreground">{cert.issuer}</p>
+                            <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                              ✓ Verified on Credly
+                            </span>
+                          </div>
+                        </div>
+                        <span className="text-xs font-mono text-accent flex-shrink-0">{cert.year}</span>
+                      </a>
+                    ) : (
+                      <div className="p-4 rounded-xl bg-card border border-border flex items-center justify-between gap-3">
+                        <div>
+                          <p className="font-medium text-sm">{cert.name}</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">{cert.issuer}</p>
+                        </div>
+                        <span className="text-xs font-mono text-accent flex-shrink-0">{cert.year}</span>
                       </div>
-                      <span className="text-xs font-mono text-accent">{cert.year}</span>
-                    </div>
+                    )}
                   </AnimatedSection>
                 ))}
               </div>

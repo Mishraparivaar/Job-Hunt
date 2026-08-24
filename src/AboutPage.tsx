@@ -155,11 +155,34 @@ export default function AboutPage({ lang = 'en' }: { lang?: AboutLang }) {
           <div className="space-y-3">
             {t.certifications.map((cert) => (
               <div key={cert.org} className="p-3 rounded-lg bg-card border border-border">
-                <p className="font-medium text-foreground text-sm mb-1">{cert.org}</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {cert.items.map((item) => (
-                    <span key={item} className="px-2 py-0.5 rounded text-xs bg-muted/30 text-muted-foreground">{item}</span>
-                  ))}
+                <p className="font-medium text-foreground text-sm mb-2">{cert.org}</p>
+                <div className="flex flex-wrap gap-2">
+                  {cert.items.map((item) => {
+                    const itemName = typeof item === 'string' ? item : item.name
+                    const credlyUrl = typeof item === 'object' ? item.credlyUrl : undefined
+
+                    if (credlyUrl) {
+                      return (
+                        <a
+                          key={itemName}
+                          href={credlyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 transition-all font-medium group"
+                        >
+                          <span>{itemName}</span>
+                          <span className="text-[10px] bg-emerald-500/20 px-1 rounded text-emerald-300">✓ Credly</span>
+                          <ExternalLink className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                        </a>
+                      )
+                    }
+
+                    return (
+                      <span key={itemName} className="px-2 py-0.5 rounded text-xs bg-muted/30 text-muted-foreground">
+                        {itemName}
+                      </span>
+                    )
+                  })}
                 </div>
               </div>
             ))}

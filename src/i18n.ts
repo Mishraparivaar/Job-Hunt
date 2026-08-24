@@ -232,13 +232,20 @@ const masterEnglish = {
     items: [
       {
         name: 'Anthropic Claude Certified Architect — Foundations',
-        issuer: 'Anthropic (100% Agentic Architecture)',
+        issuer: 'Anthropic (100% in Agentic Architecture & Orchestration)',
         year: '2026',
+        credlyUrl: 'https://www.credly.com/badges/5d37c2f2-c466-45c0-8cf3-a9b6b5aed4b2',
+      },
+      {
+        name: 'AWS Partner: Sales Accredited - Training Badge',
+        issuer: 'Amazon Web Services Training and Certification',
+        year: '2023',
+        credlyUrl: 'https://www.credly.com/badges/0a10fe25-f5cd-4838-90d3-fb2e0e62610d',
       },
       {
         name: '24-Week AI Catalyst Certification (GrowthSchool / OutSkill)',
-        issuer: 'Amazon Web Services',
-        year: '2026',
+        issuer: 'OutSkill / GrowthSchool',
+        year: '2024',
       },
       {
         name: 'AWS Solutions Architect – Associate',
@@ -253,7 +260,7 @@ const masterEnglish = {
       {
         name: 'Lean Six Sigma Green Belt',
         issuer: 'KPMG',
-        year: '2018',
+        year: '2019',
       },
     ],
   },
