@@ -72,7 +72,7 @@ const PERSON = {
   description: 'Senior Manager, Chief of Staff & AI Transformation Lead at Capgemini India (~20k practice). Anthropic Claude Certified Architect.',
   jobTitle: ['Chief of Staff & AI Transformation Lead', 'Senior Manager', 'Enterprise AI Systems Architect'],
   sameAs: [
-    'https://www.linkedin.com/in/prakharmishra/',
+    'https://www.linkedin.com/in/prakhar-mishra-b74b85124-mishra-b74b85124/-mishra-b74b85124/',
     'https://github.com/prakharmishra2026',
   ],
 }

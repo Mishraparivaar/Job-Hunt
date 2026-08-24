@@ -685,7 +685,7 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
           heading={t.cta.heading}
           body={t.cta.body}
           ctaLabel={`${t.cta.label} →`}
-          ctaHref="https://linkedin.com/in/prakhar"
+          ctaHref="https://www.linkedin.com/in/prakhar-mishra-b74b85124-mishra-b74b85124/"
           external
           secondaryLabel={`${(t.cta as any).labelSecondary} →`}
           secondaryHref="mailto:hi@prakhar-ai.dev"
@@ -777,7 +777,7 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
           heading={(t as any).ctaAfterEnterprise.heading}
           body={t.cta.body}
           ctaLabel={`${t.cta.label} →`}
-          ctaHref="https://linkedin.com/in/prakhar"
+          ctaHref="https://www.linkedin.com/in/prakhar-mishra-b74b85124-mishra-b74b85124/"
           external
           secondaryLabel={`${(t.cta as any).labelSecondary} →`}
           secondaryHref="mailto:hi@prakhar-ai.dev"
@@ -829,7 +829,7 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
           heading={(t as any).ctaAfterDownloads.heading}
           body=""
           ctaLabel={`${t.cta.label} →`}
-          ctaHref="https://linkedin.com/in/prakhar"
+          ctaHref="https://www.linkedin.com/in/prakhar-mishra-b74b85124-mishra-b74b85124/"
           external
           secondaryLabel={`${(t.cta as any).labelSecondary} →`}
           secondaryHref="mailto:hi@prakhar-ai.dev"

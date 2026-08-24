@@ -12,7 +12,7 @@ export const graphData = {
       "practice_size": "20,000+ professionals",
       "location": "Gurgaon, India (Open to Bangalore, Hyderabad, Mumbai, Global relocation)",
       "email": "prakharmishra2015@gmail.com",
-      "linkedin": "https://www.linkedin.com/in/prakharmishra/",
+      "linkedin": "https://www.linkedin.com/in/prakhar-mishra-b74b85124-mishra-b74b85124/-mishra-b74b85124/",
       "github": "https://github.com/prakharmishra2026",
       "portfolio": "https://prakhar-ai.dev",
       "total_experience_years": 6,
