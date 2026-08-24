@@ -116,7 +116,7 @@ Object.defineProperty(window, '__prakhar', {
     experience: 'Senior Manager & Chief of Staff at Capgemini India (~20,000 practice)',
     governance: '9 Strategic Transformation Programs · PMO Control Tower · AI FinOps',
     contact: 'prakharmishra2015@gmail.com',
-    linkedin: 'https://www.linkedin.com/in/prakhar-mishra-b74b85124-mishra-b74b85124/-mishra-b74b85124/',
+    linkedin: 'https://www.linkedin.com/in/prakhar-mishra-b74b85124',
     github: 'https://github.com/prakharmishra2026',
   }),
   configurable: false,

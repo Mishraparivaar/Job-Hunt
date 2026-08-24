@@ -513,7 +513,7 @@ export default function SelfHealingChatbot({ lang = 'en' }: { lang?: Lang }) {
           heading={t.cta.heading}
           body={t.cta.body}
           ctaLabel={t.cta.label}
-          ctaHref="https://www.linkedin.com/in/prakhar-mishra-b74b85124-mishra-b74b85124/"
+          ctaHref="https://www.linkedin.com/in/prakhar-mishra-b74b85124"
           external
           secondaryLabel={t.cta.labelSecondary}
           secondaryHref="mailto:hi@prakhar-ai.dev"

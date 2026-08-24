@@ -4,7 +4,7 @@ import { MapPin, Mail, ExternalLink, Award, GraduationCap, Briefcase, ChevronRig
 import { aboutContent, type AboutLang } from './about-i18n'
 
 const SOCIAL_LINKS: { name: string; url: string; rel?: string }[] = [
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/prakhar-mishra-b74b85124-mishra-b74b85124/-mishra-b74b85124/', rel: 'me noopener noreferrer' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/prakhar-mishra-b74b85124', rel: 'me noopener noreferrer' },
   { name: 'GitHub', url: 'https://github.com/prakharmishra2026', rel: 'me noopener noreferrer' },
   { name: 'RoutingMagic', url: 'https://github.com/prakharmishra2026/RoutingMagic', rel: 'me noopener noreferrer' },
 ]
