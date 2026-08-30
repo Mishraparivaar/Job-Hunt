@@ -206,11 +206,11 @@ export default async function handler(req) {
           output_modalities: ['audio'],
           audio: {
             input: {
-              format: 'pcm16',
+              format: { type: 'audio/pcm', rate: 24000 },
               turn_detection: { type: 'server_vad' },
               transcription: { model: 'whisper-1' },
             },
-            output: { voice: VOICE_NAME, format: 'pcm16' },
+            output: { voice: VOICE_NAME, format: { type: 'audio/pcm', rate: 24000 } },
           },
           tools: [{
             type: 'function',

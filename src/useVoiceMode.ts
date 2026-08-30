@@ -378,7 +378,7 @@ export function useVoiceMode() {
             type: 'realtime',
             audio: {
               input: {
-                format: 'pcm16',
+                format: { type: 'audio/pcm', rate: 24000 },
                 turn_detection: {
                   type: 'server_vad',
                   threshold: 0.5,
