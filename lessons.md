@@ -15,3 +15,8 @@
 ## 4. Playwright Node Resolution in Nested Subdirectories
 - **Pitfall:** Running Node scripts from workspace root when `playwright` is installed in `Job-Hunt/node_modules` causes `MODULE_NOT_FOUND`.
 - **Solution:** Explicitly pass `NODE_PATH=/Users/grandvision/Projects/CV/Job-Hunt/node_modules node script.js`.
+
+## Forked-template contamination runs deep
+- **Pitfall:** This repo was forked from another person's portfolio (Santiago / "Career-Ops" / Santifer iRepair). Identity leaked far beyond the visible pages: `scripts/prerender.tsx` full Person JSON-LD, `api/voice-token.js` Spanish "Seville" voice persona, `api/cron/evaluate.js` evaluator prompt, `README.md` half in Spanish, `public/robots.txt`/`humans.txt`/`security.txt`, 400+ asset files, `.seo-audit*/` dirs.
+- **Solution:** When de-branding a fork, grep the WHOLE tree for the prior identity (name, domain, email, project slugs) — not just `src/`. Check: system/evaluator prompts, SEO/prerender scripts, static text files under `public/`, CI workflow env vars, and JSON-LD in `index.html`. `npm run build` here is only `tsc -b && vite build`, so `scripts/` is dead weight and safe to delete wholesale.
+- **Rule:** After the purge, re-run the identity grep restricted to the *shipping* surface (`src/ api/ public/ index.html vercel.json`) and require zero hits before pushing.
