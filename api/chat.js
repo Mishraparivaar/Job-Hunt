@@ -79,7 +79,7 @@ export default async function handler(req) {
             controller.enqueue(
               encoder.encode(
                 `data: ${JSON.stringify({
-                  text: "I'm having a brief connection issue. Please feel free to reach out to Prakhar directly at hi@prakhar-ai.dev or via LinkedIn!",
+                  text: "I'm having a brief connection issue. Please feel free to reach out to Prakhar directly at prakharmishra2015@gmail.com or via LinkedIn!",
                   replace: true,
                 })}\n\n`
               )
@@ -137,7 +137,7 @@ export default async function handler(req) {
           controller.enqueue(
             encoder.encode(
               `data: ${JSON.stringify({
-                text: "I encountered a momentary glitch. Please try again or reach out to Prakhar at hi@prakhar-ai.dev.",
+                text: "I encountered a momentary glitch. Please try again or reach out to Prakhar at prakharmishra2015@gmail.com.",
                 replace: true,
               })}\n\n`
             )

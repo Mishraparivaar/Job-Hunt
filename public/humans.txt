@@ -1,24 +1,18 @@
-/* TEAM */
-Builder: Santiago Fernandez de Valderrama Aparicio
-Role: Head of Applied AI · AI Product Manager · Solutions Architect
-Contact: hi@santifer.io
-Site: https://santifer.io
-Location: Seville, Spain
-LinkedIn: https://linkedin.com/in/santifer
-GitHub: https://github.com/santifer
+/* OWNER */
+Name: Prakhar Mishra
+Role: Chief of Staff & Enterprise AI Transformation Lead, Capgemini C&CA India
+Contact: prakharmishra2015@gmail.com
+Site: https://prakhar-ai.dev
+Location: Gurgaon, India
+LinkedIn: https://www.linkedin.com/in/prakhar-mishra-b74b85124
+GitHub: https://github.com/prakharmishra2026
 
 /* THANKS */
 AI Pair: Claude Code (Anthropic)
 
 /* SITE */
 Stack: React 19, TypeScript, Vite, Tailwind CSS, Motion
-AI: Claude API (claude-sonnet-4-6), streaming via Vercel Edge
-Quality: 71 evals, 6-layer security, Langfuse observability, closed-loop quality
+AI: Claude API, streaming via Vercel Edge
+Quality: automated evals, layered prompt-injection defense, Langfuse observability
 Hosting: Vercel
 Standards: llms.txt, security.txt, JSON-LD, Open Graph
-
-/* CRAFT */
-Performance: Lighthouse 100, pre-rendered SSR, critical CSS inlining
-Security: CSP, input sanitization, prompt injection defense, rate limiting
-Accessibility: Semantic HTML, ARIA labels, keyboard navigation
-SEO: Programmatic meta tags, structured data, sitemap, hreflang

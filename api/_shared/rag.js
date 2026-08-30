@@ -226,15 +226,9 @@ export function extractSources(chunks) {
   return sources
 }
 
-// Keywords that signal the response actually references a given article
-export const ARTICLE_KEYWORDS = {
-  'n8n-for-pms':          ['n8n', 'nodemation'],
-  'jacobo':               ['jacobo', 'agente ia', 'ai agent', 'whatsapp', 'multi-agent', 'multiagent'],
-  'business-os':          ['business os', 'erp', 'airtable bases', 'crm', 'inventory'],
-  'programmatic-seo':     ['seo programático', 'programmatic seo', 'web programática', 'programmatic web', 'decision engine', 'indexable', 'dataforseo', 'seo pipeline', 'seo automatizado', 'automated seo'],
-  'self-healing-chatbot': ['chatbot', 'this chat', 'este chat', 'evals', 'self-healing', 'closed-loop', 'langfuse', 'rag'],
-  'prakhar-irepair':     ['prakhar irepair', 'irepair', 'repair business', 'taller de reparación'],
-}
+// Keywords that signal the response actually references a given article.
+// The site currently has no long-form article pages — kept for API compatibility.
+export const ARTICLE_KEYWORDS = {}
 
 /** Filter RAG sources to only articles actually mentioned in the response, max 3 */
 export function filterSourcesByResponse(sources, responseText) {
@@ -247,15 +241,9 @@ export function filterSourcesByResponse(sources, responseText) {
   }).slice(0, 3)
 }
 
-// Static article routes — used to generate badges from keywords regardless of RAG
-export const ARTICLE_ROUTES = {
-  'n8n-for-pms':          { page_path_es: '/n8n-para-pms', page_path_en: '/n8n-for-pms' },
-  'jacobo':               { page_path_es: '/agente-ia-jacobo', page_path_en: '/ai-agent-jacobo' },
-  'business-os':          { page_path_es: '/business-os-para-airtable', page_path_en: '/business-os-for-airtable' },
-  'programmatic-seo':     { page_path_es: '/seo-programatico', page_path_en: '/programmatic-seo' },
-  'self-healing-chatbot': { page_path_es: '/chatbot-que-se-cura-solo', page_path_en: '/self-healing-chatbot' },
-  'prakhar-irepair':     { page_path_es: '/prakhar-irepair', page_path_en: '/prakhar-irepair-founder' },
-}
+// Static article routes — used to generate badges from keywords regardless of RAG.
+// No long-form article pages currently — kept for API compatibility.
+export const ARTICLE_ROUTES = {}
 
 // Home fallback
 export const HOME_SOURCE = {
@@ -409,7 +397,7 @@ export function classifyIntent(text) {
     tags.push('jailbreak-attempt')
   }
 
-  if (/experiencia|experience|trabajo|work|career|carrera|prakhar|irepair/.test(lower)) tags.push('topic:experience')
+  if (/experience|work|career|prakhar|capgemini|chief of staff/.test(lower)) tags.push('topic:experience')
   if (/proyecto|project|portfolio|github|código|code/.test(lower)) tags.push('topic:projects')
   if (/contact|contacto|email|linkedin|hablar|talk|hire|contratar/.test(lower)) tags.push('topic:contact')
   if (/stack|tech|tecnolog|python|react|airtable|claude|ai|ia|llm|agente|agent/.test(lower)) tags.push('topic:technical')

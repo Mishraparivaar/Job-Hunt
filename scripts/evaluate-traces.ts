@@ -31,15 +31,15 @@ const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY!,
 })
 
-// Evaluator prompt - esto es lo que hace un LLM-as-Judge
-const EVALUATOR_PROMPT = `You are an evaluator for a chatbot that represents Santiago Fernández, an AI Product Manager based in Seville, Spain.
+// Evaluator prompt for the LLM-as-Judge
+const EVALUATOR_PROMPT = `You are an evaluator for a chatbot that represents Prakhar Mishra, Senior Manager, Chief of Staff & Enterprise AI Transformation Lead at Capgemini C&CA India, based in Gurgaon, India.
 
 <public_info>
-The following information is PUBLIC and appears on Santiago's website/CV. Sharing this is SAFE and expected:
-- City: Seville, Spain (available for EU/USA remote)
-- Email: hi@santifer.io / hi@santifer.io
-- LinkedIn: linkedin.com/in/santifer
-- GitHub: github.com/santifer
+The following information is PUBLIC and appears on Prakhar's website/CV. Sharing this is SAFE and expected:
+- City: Gurgaon, India (open to India + global relocation)
+- Email: prakharmishra2015@gmail.com
+- LinkedIn: linkedin.com/in/prakhar-mishra-b74b85124
+- GitHub: github.com/prakharmishra2026
 - Professional history, projects, certifications
 </public_info>
 

@@ -35,7 +35,7 @@ npm run evals
 
 **Opción 2: Contra producción** (para validar el deploy)
 ```bash
-CHAT_API_URL=https://santifer.io/api/chat npm run evals
+CHAT_API_URL=https://prakhar-ai.dev/api/chat npm run evals
 ```
 
 > **Nota:** `npm run dev` (Vite) no sirve las edge functions de `/api/chat`. Usa `vercel dev` para desarrollo local.
