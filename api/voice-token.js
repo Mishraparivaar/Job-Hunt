@@ -27,6 +27,10 @@ function getLangfuse() {
 const MAX_SESSIONS_PER_IP = 3
 const WINDOW_MS = 24 * 60 * 60 * 1000 // 24 hours
 
+// GA Realtime model + voice (must match the WS ?model= in src/useVoiceMode.ts)
+const VOICE_MODEL = 'gpt-realtime'
+const VOICE_NAME = 'cedar'
+
 async function checkRateLimit(ip) {
   if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
     return { allowed: true, remaining: MAX_SESSIONS_PER_IP }
@@ -182,45 +186,54 @@ export default async function handler(req) {
       })
     }
 
-    // Compose prompt: base rules + language-specific voice affect
-    const voiceAffect = VOICE_AFFECT_EN
-    const instructions = `${VOICE_BASE_PROMPT}\n\n${voiceAffect}`
+    // Compose prompt: base rules + voice affect
+    const instructions = `${VOICE_BASE_PROMPT}\n\n${VOICE_AFFECT_EN}`
 
-    // Request ephemeral token from OpenAI Realtime API
-    const response = await fetch('https://api.openai.com/v1/realtime/sessions', {
+    // Mint an ephemeral client secret for the GA Realtime API.
+    // (The old POST /v1/realtime/sessions endpoint was removed.)
+    const response = await fetch('https://api.openai.com/v1/realtime/client_secrets', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'gpt-realtime-2025-08-28',
-        voice: 'cedar',
-        modalities: ['audio', 'text'],
-        instructions,
-        input_audio_transcription: { model: 'whisper-1' },
-        turn_detection: { type: 'server_vad' },
-        tools: [{
-          type: 'function',
-          name: 'search_portfolio',
-          description: 'Search your own published case studies for project details, architectures, metrics, and technical decisions.',
-          parameters: {
-            type: 'object',
-            properties: {
-              query: {
-                type: 'string',
-                description: 'The search query to find relevant portfolio content',
-              },
+        expires_after: { anchor: 'created_at', seconds: 600 },
+        session: {
+          type: 'realtime',
+          model: VOICE_MODEL,
+          instructions,
+          output_modalities: ['audio'],
+          audio: {
+            input: {
+              format: 'pcm16',
+              turn_detection: { type: 'server_vad' },
+              transcription: { model: 'whisper-1' },
             },
-            required: ['query'],
+            output: { voice: VOICE_NAME, format: 'pcm16' },
           },
-        }],
+          tools: [{
+            type: 'function',
+            name: 'search_portfolio',
+            description: 'Search Prakhar\'s portfolio for project details, architectures, metrics, and decisions.',
+            parameters: {
+              type: 'object',
+              properties: {
+                query: {
+                  type: 'string',
+                  description: 'The search query to find relevant portfolio content',
+                },
+              },
+              required: ['query'],
+            },
+          }],
+        },
       }),
     })
 
     if (!response.ok) {
       const errorText = await response.text()
-      console.error('OpenAI Realtime session error:', errorText)
+      console.error('OpenAI Realtime client_secrets error:', response.status, errorText)
       return new Response(JSON.stringify({ error: 'Failed to create voice session' }), {
         status: 502,
         headers: { 'Content-Type': 'application/json' },
@@ -243,10 +256,20 @@ export default async function handler(req) {
       await langfuse.flushAsync()
     }
 
+    // GA client_secrets returns the secret at top-level `value`.
+    const token = data.value || data.client_secret?.value
+    if (!token) {
+      console.error('OpenAI Realtime client_secrets: no token in response', JSON.stringify(data).slice(0, 500))
+      return new Response(JSON.stringify({ error: 'Failed to create voice session' }), {
+        status: 502,
+        headers: { 'Content-Type': 'application/json' },
+      })
+    }
+
     return new Response(JSON.stringify({
-      token: data.client_secret?.value,
+      token,
       traceId,
-      expiresAt: data.client_secret?.expires_at,
+      expiresAt: data.expires_at || data.client_secret?.expires_at,
     }), {
       headers: { 'Content-Type': 'application/json' },
     })
