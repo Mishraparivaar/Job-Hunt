@@ -181,7 +181,7 @@ const FOOTER_I18N = {
   },
   en: {
     role: 'Chief of Staff & AI Transformation Lead',
-    bio: 'Senior Manager at Capgemini India (~20k practice). Anthropic Claude Certified Architect. National AI enablement for 2,500+ leaders and production AI systems.',
+    bio: 'Senior Manager at Capgemini India (~20k practice). Anthropic Claude Certified Architect. AI enablement for 2,000+ executives across 13 hubs and production AI systems.',
     fellowAt: 'Capgemini C&CA',
     copyright: 'All rights reserved.',
   },

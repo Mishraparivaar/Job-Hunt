@@ -301,16 +301,16 @@ function App() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="p-4 rounded-xl bg-card border border-border/50">
-              <p className="font-display text-3xl font-bold text-gradient-theme">2,500+</p>
-              <p className="text-xs text-muted-foreground mt-1">Senior Leaders Enablement Mandate</p>
+              <p className="font-display text-3xl font-bold text-gradient-theme">2,000+</p>
+              <p className="text-xs text-muted-foreground mt-1">Senior Executives Enabled in AI</p>
             </div>
             <div className="p-4 rounded-xl bg-card border border-border/50">
-              <p className="font-display text-3xl font-bold text-gradient-theme">4</p>
+              <p className="font-display text-3xl font-bold text-gradient-theme">3</p>
               <p className="text-xs text-muted-foreground mt-1">Promotions in 6 Years</p>
             </div>
             <div className="p-4 rounded-xl bg-card border border-border/50">
-              <p className="font-display text-3xl font-bold text-gradient-theme">$1.5M–$3M+</p>
-              <p className="text-xs text-muted-foreground mt-1">Bench Holding Costs De-risked</p>
+              <p className="font-display text-3xl font-bold text-gradient-theme">~$1.9M</p>
+              <p className="text-xs text-muted-foreground mt-1">Annual Idle-Bench Cost Released</p>
             </div>
             <div className="p-4 rounded-xl bg-card border border-border/50">
               <p className="font-display text-3xl font-bold text-gradient-theme">74%</p>

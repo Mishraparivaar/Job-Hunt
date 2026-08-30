@@ -2,12 +2,12 @@ export const seo = {
   es: {
     title: 'Prakhar Mishra | Chief of Staff & Enterprise AI Transformation Lead',
     description:
-      'Senior Manager & Chief of Staff at Capgemini C&CA (~20k practice). Anthropic Claude Certified Architect. Enterprise AI Enablement Architect (2,500+ leaders), AI Continuous Evaluation Platforms, and PMO Control Tower Governance.',
+      'Senior Manager & Chief of Staff at Capgemini C&CA (~20k practice). Anthropic Claude Certified Architect. Enterprise AI Enablement Architect (2,000+ executives across 13 delivery hubs), AI Continuous Evaluation Platforms, and PMO Control Tower Governance.',
   },
   en: {
     title: 'Prakhar Mishra | Chief of Staff & Enterprise AI Transformation Lead',
     description:
-      'Senior Manager & Chief of Staff at Capgemini C&CA (~20k practice). Anthropic Claude Certified Architect. Enterprise AI Enablement Architect (2,500+ leaders), AI Continuous Evaluation Platforms, and PMO Control Tower Governance.',
+      'Senior Manager & Chief of Staff at Capgemini C&CA (~20k practice). Anthropic Claude Certified Architect. Enterprise AI Enablement Architect (2,000+ executives across 13 delivery hubs), AI Continuous Evaluation Platforms, and PMO Control Tower Governance.',
   },
 };
 
@@ -32,7 +32,7 @@ const masterEnglish = {
         'from leadership mindsets to production systems.',
       ],
     ],
-    why: 'As Chief of Staff to the EVP of Cloud & Custom Applications (~20,000 professionals within a 230,000 India workforce) and partner to the Unit COO, I govern 9 central strategic transformation programs, architected national AI leadership enablement for 2,500+ senior executives, and designed internal AI evaluation platforms saving millions in bench holding costs.',
+    why: 'As Chief of Staff to the EVP of Cloud & Custom Applications (~20,000 professionals within a 230,000 India workforce) and partner to the Unit COO, I govern 9 strategic transformation programmes across 38+ business leaders, architected AI leadership enablement for 2,000+ senior executives across 13 delivery hubs, and designed internal AI evaluation platforms that released INR 18 Cr (~$1.9M) in annual idle-bench cost.',
     seeking: [
       'Leading the next wave of enterprise AI transformation and strategic operations.',
       'Large-scale enablement. Agentic systems. AI FinOps token optimization.',
@@ -58,20 +58,20 @@ const masterEnglish = {
     ],
   },
   metrics: [
-    { value: '2,500+', label: 'Senior Leaders Enabled in AI' },
-    { value: '4', label: 'Rapid Promotions in 6 Years' },
-    { value: '$1.5M–$3M+', label: 'Annual Bench Cost Savings' },
+    { value: '2,000+', label: 'Senior Executives Enabled in AI' },
+    { value: '3', label: 'Promotions in 6 Years' },
+    { value: '~$1.9M', label: 'Annual Idle-Bench Cost Released' },
     { value: '74%', label: 'AI FinOps Token Reduction' },
   ],
   summary: {
-    p1: 'Strategic Chief of Staff & Enterprise AI Transformation Leader with 6 years of rapid growth (4 promotions), operating across the executive leadership of Capgemini India (~20k practice).',
+    p1: 'Strategic Chief of Staff & Enterprise AI Transformation Leader with 6 years of rapid growth (3 promotions), operating across the executive leadership of Capgemini India (~20k practice).',
     p1Highlight: 'Direct advisor to EVP & partner to Unit COO',
     p1End: ', translating C-suite priorities into enterprise AI operating systems, national leadership enablement, and high-impact talent operations.',
   },
   coreCompetencies: {
     title: 'Core Competencies',
     items: [
-      { title: 'Enterprise AI Enablement', desc: '2,500+ leaders enabled, 94 production prototypes, 200-trainer TTT multiplier model.' },
+      { title: 'Enterprise AI Enablement', desc: '2,000+ executives enabled across 13 hubs; 300+ certified trainers via a train-the-trainer model; thousands of working prototypes.' },
       { title: 'Chief of Staff & Governance', desc: 'Governance of 9 strategic transformation programs, PMO Control Towers, C-suite summits.' },
       { title: 'Continuous AI Evaluation', desc: 'Adaptive MCQ engines & AI voice platforms, compressing bench cycles 117 to <60 days.' },
       { title: 'Claude Certified Architect', desc: 'Anthropic Certified Architect with 100% score in Agentic Architecture & Orchestration.' },
@@ -89,9 +89,9 @@ const masterEnglish = {
       period: 'Nov 2023 – Present',
       desc: 'Direct strategic advisor to the Executive Vice President and partner to the Unit COO across ~20,000 professionals within a 230,000 national organization. Oversees PMO operations, AI transformation initiatives, workforce strategy, and program governance with 7 direct reports.',
       highlights: [
-        'Architected the National Enterprise AI Leadership Enablement Program for senior leadership (VPs & Senior Directors) across Bangalore, Hyderabad, Mumbai, and Pune; generated 94 production AI prototypes and established a 200-trainer multiplier model (TTT).',
-        'Championed AI-driven continuous candidate evaluation: rolled out adaptive competency assessment engines (<5% certification failure rate) and AI voice interview platforms (240+ evaluated).',
-        'Compressed talent bench evaluation cycles from 117 days to <60 days with audit-ready documentation, generating $1.5M–$3M+ in annual holding cost savings.',
+        "Built Capgemini India's first AI upskilling architecture for senior executives across 13 technology hubs; as Chief AI Trainer, ran a train-the-trainer model that certified 300+ trainers who upskilled 2,000+ senior executives, producing thousands of working prototypes scoped to named enterprise use cases.",
+        'Championed AI-driven continuous candidate evaluation: rolled out adaptive competency assessment engines and AI-led voice interviews across 5,000+ associates, cutting external certification failure from 20% to under 5%.',
+        'Compressed bench evaluation cycles from 117 to under 60 days with audit-ready documentation, releasing INR 18 Cr (~$1.9M) in annual idle-bench cost.',
         'Partnered with Unit COO to transform PMO into an Execution Control Tower governing 9 strategic business transformation programs across 38+ business leaders.',
         'Restructured the management trainee lifecycle, increasing talent billability from 30% to 60%, reducing intake cycle time by 80%, and reducing trainee attrition by ~90%.',
       ],
@@ -100,8 +100,8 @@ const masterEnglish = {
       company: 'Capgemini — Media & Entertainment Solutions',
       role: 'Product Business Analyst — Theatrical Distribution SaaS Platform',
       location: 'Mumbai / Remote',
-      period: 'Dec 2021 – Aug 2023',
-      desc: 'Product BA for premier SaaS theatrical distribution platform utilized by Hollywood studios (Sony Pictures, Universal Studios).',
+      period: 'Sep 2021 – Mar 2024',
+      desc: 'Senior Consultant | Product BA & Project Manager for a SaaS theatrical distribution platform used by two major Hollywood studios (Sony Pictures, Universal Studios).',
       highlights: [
         'Led client product demos driving 15% engagement increase and 5% revenue uplift; designated Sony BPO SPOC.',
         'Contributed to winning client bid through RFP response and client proposal defense.',
@@ -120,7 +120,7 @@ const masterEnglish = {
       role: 'Lead, CoE Marketing Office',
       location: 'India / North America',
       period: 'Apr 2021 – Nov 2021',
-      desc: 'Managed 8-member Marketing CoE team; launched global "Pitch Your View" whitepaper initiative; awarded Capgemini Super Team Award 2021.',
+      desc: 'Led a six-member marketing team; launched "Pitch Your View" (18 technical blogs + 9 points of view); awarded the Capgemini Super Team Award 2021.',
     },
   },
   projects: {
@@ -177,7 +177,7 @@ const masterEnglish = {
     desc: 'Certified architectural mastery in Model Context Protocol (MCP), agentic multi-tool orchestration, prompt evaluation harnesses, and enterprise LLMOps.',
     highlights: [
       '100% Score in Agentic Architecture & Multi-Tool Orchestration',
-      'Architected 200-Trainer Multiplier Model (TTT) across Capgemini India',
+      'Ran a 300+ trainer Train-the-Trainer model across Capgemini India',
       'Engineered 4-layer AI FinOps caching achieving 74% enterprise token reduction',
     ],
   },
@@ -195,9 +195,9 @@ const masterEnglish = {
       {
         title: 'Enterprise AI & Executive Communication Masterclasses',
         event: 'Capgemini Capability Enablement (2024–2026)',
-        desc: 'Trained 500+ corporate professionals and leaders on strategic prompt engineering, agentic AI workflows, and executive storytelling.',
-        description: 'Trained 500+ corporate professionals and leaders on strategic prompt engineering, agentic AI workflows, and executive storytelling.',
-        tag: '500+ Professionals Trained',
+        desc: 'Trained 300+ certified trainers and guided 1,000+ executives on strategic prompt engineering, agentic AI workflows, vibe coding, and executive storytelling.',
+        description: 'Trained 300+ certified trainers and guided 1,000+ executives on strategic prompt engineering, agentic AI workflows, vibe coding, and executive storytelling.',
+        tag: '1,000+ Executives Enabled',
       },
       {
         title: 'Independent Music Production & Songwriting',
@@ -216,7 +216,7 @@ const masterEnglish = {
         degree: 'Master of Business Administration (MBA)',
         institution: 'Xavier Institute of Management, Bhubaneswar (XIMB)',
         period: '2018 – 2020',
-        highlights: 'Strategy & Marketing • UN Talanoa Dialogue • Nestlé Ambassador • Colgate Transcend National Finalist • Invited Guest Corporate Speaker (2026)',
+        highlights: 'Business Management • UN Talanoa Dialogue • Nestlé Campus Brand Ambassador • Colgate Transcend National Finalist • Alumni Keynote Speaker, Xcelsior 6.0 (2026)',
       },
       {
         degree: 'Bachelor of Technology (B.Tech)',
@@ -245,7 +245,7 @@ const masterEnglish = {
       {
         name: '24-Week AI Catalyst Certification (GrowthSchool / OutSkill)',
         issuer: 'OutSkill / GrowthSchool',
-        year: '2024',
+        year: '2026',
       },
       {
         name: 'AWS Solutions Architect – Associate',
@@ -316,7 +316,7 @@ const masterEnglish = {
       { icon: 'badge-check', label: 'Claude Certified Architect', query: 'Tell me about your Claude Certified Architect credential' },
       { icon: 'zap', label: 'Enterprise AI Enablement (20K Org)', query: 'Tell me about your Enterprise AI Enablement program across 20,000 professionals' },
       { icon: 'trending-up', label: 'Chief of Staff & Global PMO', query: 'What is your role as Chief of Staff and Global PMO Lead?' },
-      { icon: 'code', label: '94 Executive AI Solutions', query: 'How did senior leaders build 94 AI prototypes in the Executive Studio?' },
+      { icon: 'code', label: 'Executive AI Enablement', query: 'How did you scale AI enablement to 2,000+ senior executives across 13 hubs?' },
     ],
     voice: {
       title: "Prakhar's Voice AI",
